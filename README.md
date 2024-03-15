@@ -17,7 +17,7 @@ ModuleRaid is a versatile utility designed to retrieve modules from `webpack 5` 
 
 ```js
 const myWebpackModuleByID = moduleRaid[18]; // Get Module By id (Webpack)
-const myCometModuleByName = moduleRaid["MySocketPacket"]; // Get Module By Name (Comet)
+const myCometModuleByName = moduleRaid["MySocketModule"]; // Get Module By Name (Comet)
 
 const hasMyModule = moduleRaid.some(mod => mod.fromString); // Returns a boolean value.
 const myModule = moduleRaid.find(mod => mod.fromString); // Returns a single result.
@@ -25,7 +25,7 @@ const myModules = moduleRaid.filter(mod => mod.fromString); // Returns an array.
 ```
 
 ```js
-const hasMyModule = moduleRaid.someExport('fromString'); // Returns a boolean value.
-const SocketManager = moduleRaid.findExport('Socket'); // Returns a single result.
-const results = moduleRaid.filterExport('Socket'); // Returns an array.
+const hasMyModule = moduleRaid.someExport("fromString"); // Returns a boolean value.
+const SocketManager = moduleRaid.findExport("Socket"); // Returns a single result.
+const results = moduleRaid.filterExport("Socket"); // Returns an array.
 ```
