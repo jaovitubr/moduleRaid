@@ -4,6 +4,8 @@ ModuleRaid is a versatile utility designed to retrieve modules from `webpack 5` 
 
 ## Documentation
 
+- `window.moduleRaid`: It is a global key-value object that stores all modules and prototypes to manipulate the modules
+
 - `moduleRaid.some(predicate)`: Checks if a module exists using a predicate function.
 - `moduleRaid.find(predicate)`: Finds a specific module using a predicate function.
 - `moduleRaid.filter(predicate)`: Filters modules using a predicate function.
@@ -14,6 +16,9 @@ ModuleRaid is a versatile utility designed to retrieve modules from `webpack 5` 
 ## Examples
 
 ```js
+const myWebpackModuleByID = moduleRaid[18]; // Get Module By id (Webpack)
+const myCometModuleByName = moduleRaid["MySocketPacket"]; // Get Module By Name (Comet)
+
 const hasMyModule = moduleRaid.some(mod => mod.fromString); // Returns a boolean value.
 const myModule = moduleRaid.find(mod => mod.fromString); // Returns a single result.
 const myModules = moduleRaid.filter(mod => mod.fromString); // Returns an array.
